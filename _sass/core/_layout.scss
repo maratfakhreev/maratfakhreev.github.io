@@ -59,3 +59,24 @@ body {
     padding: 1.5rem;
   }
 }
+
+.back-link {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4rem;
+  height: 100%;
+
+  .back-link-arrow {
+    position: absolute;
+    font-size: 3rem;
+    top: 50%;
+    left: 1.2rem;
+    margin-top: -25px;
+  }
+
+  &:hover {
+    background-color: rgba($second-color, .2);
+  }
+}
