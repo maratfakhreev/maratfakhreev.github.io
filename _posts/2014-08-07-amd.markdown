@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "Asynchronous Module Definition (AMD). Using Require.js in Backbone.js application"
-date:   2014-08-07
+title: "Asynchronous Module Definition (AMD). Using Require.js in Backbone.js application"
+date: 2014-08-07
+type: code
 ---
 
 The Asynchronous Module Definition API specifies a mechanism for defining modules such that the module and its dependencies can be asynchronously loaded. This is particularly well suited for the browser environment where synchronous loading of modules incurs performance, usability, debugging and cross-domain access problems.
@@ -299,8 +300,6 @@ The AMD format comes from wanting a module format that was better than today's "
 + Encapsulates the module definition. Gives you the tools to avoid polluting the global namespace.
 + Defines a way to include multiple modules in one file.
 + Allows setting a function as the return value. This is really useful for constructor functions.
-
----
 
 ### More details here:
 
