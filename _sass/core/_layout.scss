@@ -1,0 +1,56 @@
+html,
+body {
+  margin: 0;
+}
+
+body {
+  background-color: $bg-color;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: center;
+  min-height: 100vh;
+  font-family: $font-family;
+  position: relative;
+  color: $main-color;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: $second-color;
+  }
+}
+
+.header,
+.footer,
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: center;
+  width: 640px;
+}
+
+.header {
+  padding-top: 110px;
+}
+
+.content {
+  flex: 1;
+}
+
+.footer {
+  color: $second-color;
+
+  p {
+    font-size: .9rem;
+    padding: 1.5rem;
+  }
+}

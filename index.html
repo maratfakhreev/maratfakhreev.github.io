@@ -1,11 +1,19 @@
 ---
 layout: default
 ---
+<header class="header">
+  <div class="avatar"></div>
+  <h1>Marat Fakhreev</h1>
+  <h3 class="about-me">
+    Hi, I am a crazy web developer
+    <br/><br/>
+    Leggings normcore selfies, umami letterpress tattooed cronut +1 post-ironic. Lumbersexual austin flannel roof party. Semiotics hoodie celiac bitters crucifix wayfarers kickstarter, umami microdosing swag try-hard blue bottle chartreuse kogi messenger bag.
+  </h3>
+  <div class="line"></div>
+</header>
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
+<section class="home-content">
+  <h2 class="posts-heading">Posts</h2>
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
@@ -17,7 +25,4 @@ layout: default
       </li>
     {% endfor %}
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+</section>

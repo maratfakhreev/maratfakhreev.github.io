@@ -1,0 +1,53 @@
+code {
+  word-wrap: break-word;
+
+  font-weight: normal;
+}
+
+h1,
+h2 {
+  margin: 1rem 0 .5rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h6 {
+  margin-top: 0;
+  line-height: 1;
+}
+
+li {
+  list-style-position: inside;
+}
+
+p {
+  margin: 0;
+  padding: 1rem 0;
+  line-height: 1.4;
+}
+
+a {
+  color: $second-color;
+
+  &:hover {
+    color: $main-color;
+  }
+}
+
+pre {
+  line-height: 1rem;
+  line-height: 1.8;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid $border-color;
+  border-radius: 3px;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: $second-color;
+}
