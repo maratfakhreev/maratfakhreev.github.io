@@ -1,17 +1,16 @@
 title: Marat Fakhreev
+
 description: >
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Marat Fakhreev's web site. Web, Javascript, Ruby on Rails developer.
 
 social:
   - icon: github
     url:  https://github.com/maratfakhreev
 
   - icon: linkedin
-    url:  https://www.linkedin.com/in/maratfakhreev
+    url:  https://www.linkedin.com/in/marat-fakhreev-b7629767
 
-  - icon: at
+  - icon: inbox
     url:  mailto:marat.fakhreev@gmail.com
 
 markdown: redcarpet

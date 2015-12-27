@@ -5,9 +5,11 @@ layout: default
   <div class="avatar"></div>
   <h1>Marat Fakhreev</h1>
   <h3 class="about-me">
-    Hi, I am a crazy web developer
+    Hi, I am a crazy web developer located in Kazan, Russia.
     <br/><br/>
-    Leggings normcore selfies, umami letterpress tattooed cronut +1 post-ironic. Lumbersexual austin flannel roof party. Semiotics hoodie celiac bitters crucifix wayfarers kickstarter, umami microdosing swag try-hard blue bottle chartreuse kogi messenger bag.
+    I like CSS and Javascript, like to write as a usefull and not usefull code in my free time. I really love open source projects, sometimes work with Ruby/RoR. Try a free moment to learn something crazy from the web world.
+    <br/>
+    Kavabanga :)
   </h3>
   <div class="line"></div>
 </header>
@@ -17,10 +19,11 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts %}
       <li class="post-item">
-        <i class="fa fa-{{ post.type }} post-icon"></i>
-
         <h2>
-          <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+          <a class="post-link" href="{{ post.url }}">
+            <i class="fa fa-{{ post.type }} post-icon"></i>
+            {{ post.title }}
+          </a>
         </h2>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
       </li>
