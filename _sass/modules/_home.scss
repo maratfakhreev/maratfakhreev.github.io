@@ -7,14 +7,6 @@
   line-height: 1.4;
 }
 
-.line {
-  background-color: $second-color;
-  height: 1px;
-  width: 300px;
-  display: flex;
-  align-items: center;
-}
-
 .avatar {
   width: 110px;
   height: 110px;
@@ -82,23 +74,5 @@
       transform: scale(1.2, 1.2);
       transition: all .3s ease;
     }
-  }
-}
-
-.social-links {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  width: 100px;
-  height: 40px;
-  justify-content: space-between;
-
-  li {
-    list-style: none;
-  }
-
-  a {
-    font-size: 1.1rem;
   }
 }
