@@ -17,6 +17,10 @@
   &:hover {
     background-color: rgba($second-color, .2);
   }
+
+  @media (max-width: $screen-m) {
+    display: none;
+  }
 }
 
 .line {
@@ -32,8 +36,8 @@
   margin: 0;
   display: flex;
   align-items: center;
-  width: 140px;
-  height: 40px;
+  width: 150px;
+  height: 50px;
   justify-content: space-between;
 
   li {
@@ -42,5 +46,21 @@
 
   a {
     font-size: 1.1rem;
+  }
+
+  @media (max-width: $screen-s) {
+    width: 200px;
+
+    a {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (min-width: $screen-s) and (max-width: $screen-m) {
+    width: 220px;
+
+    a {
+      font-size: 1.3rem;
+    }
   }
 }

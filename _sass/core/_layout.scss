@@ -25,6 +25,14 @@ body {
     height: 3px;
     background-color: $second-color;
   }
+
+  @media (max-width: $screen-s) {
+    padding: 10px;
+  }
+
+  @media (min-width: $screen-s) and (max-width: $screen-m) {
+    padding: 20px;
+  }
 }
 
 .header,
@@ -48,6 +56,16 @@ body {
   .header,
   .home-content {
     max-width: 640px;
+  }
+
+  @media (max-width: $screen-m) {
+    width: 100%;
+    display: block;
+
+    .header,
+    .home-content {
+      margin: 0 auto;
+    }
   }
 }
 

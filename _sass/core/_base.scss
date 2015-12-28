@@ -1,9 +1,3 @@
-code {
-  word-wrap: break-word;
-
-  font-weight: normal;
-}
-
 h1,
 h2 {
   margin: 1rem 0 .5rem;
@@ -20,6 +14,14 @@ h6 {
 
 ul {
   margin: 0;
+
+  @media (max-width: $screen-s) {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: $screen-s) and (max-width: $screen-m) {
+    padding: 0 0 0 25px;
+  }
 }
 
 li {
