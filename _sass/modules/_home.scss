@@ -14,6 +14,7 @@
   background-image: url("images/avatar.jpg");
   background-size: cover;
   transition: all .3s ease;
+  position: relative;
 
   &:hover {
     transform: scale(1.1, 1.1);
