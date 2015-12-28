@@ -63,7 +63,7 @@ Each module is enclosed in a define tag that lists the module’s file dependenc
 To load JavaScript files,  transfer their path names to function `require ()`, specifying a callback function that will be called when all dependencies are loaded.
 
 ```javascript
-require(['app/application', 'libs/utils'], function(App, Utils){
+require(['app/application', 'libs/utils'], function(App, Utils) {
    //...
 })
 ```
@@ -73,7 +73,7 @@ require(['app/application', 'libs/utils'], function(App, Utils){
 To determine the modules in the browser, RequireJS uses a slightly different syntax, unlike standard CommonJS.
 
 ```javascript
-define(['jquery', 'underscore', 'libs/utils'], function($, _, Utils){
+define(['jquery', 'underscore', 'libs/utils'], function($, _, Utils) {
   var obj = {
     //...
   };
@@ -84,7 +84,7 @@ define(['jquery', 'underscore', 'libs/utils'], function($, _, Utils){
 As you can see the variable `exports` is absent, instead a return of function is used. This API can not be used on the server-side, for example in the Node.js environment. However RequireJS has a level that is compatible with CommonJS modules.
 
 ```javascript
-define(function(require, exports){
+define(function(require, exports) {
   var mod = require('./app/module');
   exports.value = module.getValue();
 })
