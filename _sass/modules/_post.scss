@@ -4,7 +4,7 @@
   position: relative;
 
   .post-icon {
-    opacity: 0.3;
+    background-color: $light-second-color;
     position: absolute;
     left: 50%;
     top: 60px;
@@ -15,7 +15,7 @@
     font-size: 1.1rem;
 
     &:hover {
-      opacity: 1;
+      background-color: $second-color;
     }
   }
 
@@ -32,10 +32,10 @@
 
   :not(pre) > code {
     line-height: .9em;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, .8);
     border: 1px solid $border-color;
     border-radius: 3px;
-    padding: 0.3em;
+    padding: .3em;
   }
 
   pre {
@@ -44,13 +44,13 @@
   }
 
   p {
-    padding: 0.5rem 0;
+    padding: .5rem 0;
     font-size: 1.1rem;
     line-height: 1.6;
   }
 
   li {
-    margin-bottom: 0.3rem;
+    margin-bottom: .3rem;
     line-height: 1.6;
   }
 }
