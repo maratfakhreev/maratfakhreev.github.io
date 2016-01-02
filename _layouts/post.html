@@ -1,14 +1,13 @@
 ---
 layout: default
 ---
-
 <a href="/" class="back-link">
   <i class="fa fa-angle-left back-link-arrow"></i>
 </a>
 
 <article class="post">
-
   <header class="post-header">
+    <i class="fa fa-{{ page.type }} post-icon"></i>
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
     <p class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}">
