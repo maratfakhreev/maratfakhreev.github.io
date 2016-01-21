@@ -27,16 +27,23 @@
   width: 100%;
 }
 
-.posts-heading {
+.posts-heading,
+.os-heading {
   font-size: 1.8rem;
   text-align: center;
 }
 
-.post-list {
+.os-heading {
+  margin-top: 100px;
+}
+
+.post-list,
+.os-list {
   padding: 0 1rem;
 }
 
-.post-item {
+.post-item,
+.os-item {
   padding-left: 50px;
   margin-bottom: 10px;
   list-style: none;
@@ -52,18 +59,21 @@
     margin: 1rem 0 .2rem 0;
   }
 
-  .post-meta {
+  .post-meta,
+  .os-meta {
     font-size: .8rem;
   }
 
-  .post-icon {
+  .post-icon,
+  .os-icon {
     position: absolute;
     top: 20px;
     left: 5px;
   }
 
   a:hover {
-    .post-icon {
+    .post-icon,
+    .os-icon {
       transform: scale(1.2, 1.2);
       transition: all .3s ease;
     }

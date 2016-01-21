@@ -36,9 +36,11 @@ p {
 }
 
 a {
+  transition: all .3s ease;
   color: $second-color;
 
   &:hover {
+    transition: all .3s ease;
     color: $main-color;
   }
 }

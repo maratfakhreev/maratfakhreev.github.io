@@ -57,7 +57,9 @@
   }
 }
 
-.post-icon {
+.post-icon,
+.os-icon {
+  box-sizing: border-box;
   background-color: $second-color;
   width: 30px;
   height: 30px;
@@ -72,4 +74,11 @@
     transform: scale(1.2, 1.2);
     transition: all .3s ease;
   }
+}
+
+.os-icon {
+  font-size: 1.3rem;
+  background-color: #fff;
+  border: 1px solid $border-color;
+  color: $second-color;
 }
