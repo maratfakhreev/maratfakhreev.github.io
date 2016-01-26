@@ -12,7 +12,7 @@ h6 {
   line-height: 1;
 }
 
-ul {
+ul, ol {
   margin: 0;
 
   @media (max-width: $screen-s) {
@@ -22,6 +22,10 @@ ul {
   @media (min-width: $screen-s) and (max-width: $screen-m) {
     padding: 0 0 0 25px;
   }
+}
+
+ol {
+  padding: 0;
 }
 
 li {
