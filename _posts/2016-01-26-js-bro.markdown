@@ -20,13 +20,13 @@ var are = {
   you: function(callback) {
     callback();
   }
-}
+};
 
 var my = {
   jsBro: function() {
     console.log(this);
   }
-}
+};
 
 are.you(my.jsBro);
 ```
