@@ -4,6 +4,7 @@ title: "Anonymous function wrapper for ES6 files in Rails application"
 date: 2015-12-19
 type: code
 ---
+
 Once upon a time Marat decided to use ES6 in Rails application. It is not a bad idea but as it turned out `Rails` does not offer a good integration with ES6 like `Babel + Gulp` does, for example. Ok, now omit the details and let's setup our application to use ES6 syntax.
 
 ### 1. First install the sprockets-es6 gem:
