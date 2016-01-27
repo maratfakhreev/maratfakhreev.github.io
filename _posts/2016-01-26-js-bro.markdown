@@ -1,0 +1,36 @@
+---
+layout: post
+title: "Are you my jsBro?"
+date: 2016-01-26
+type: commenting
+---
+
+With this "comment" icon I want to present you some new section of my blog. Although this is not a section, but rather a new articles format, short "minds" about development and developer live.
+</br>
+Let's start :)
+
+---
+
+Actually I do not like such tests on "true" developer, but you should know that every language has a lot of stupid, non-obvious questions/issues for the interview or for when you need to make fun of a colleague :)
+
+Not so long time ago I found a seemingly obvious code and called it a "test for my jsBro".
+
+```javascript
+var are = {
+  you: function(callback) {
+    callback();
+  }
+}
+
+var my = {
+  jsBro: function() {
+    console.log(this);
+  }
+}
+
+are.you(my.jsBro);
+```
+
+So, what returns the last line, what is the value of `this`? And the last question, are you my jsBro?
+</br>
+If you have answered correctly, then surely it is :)
