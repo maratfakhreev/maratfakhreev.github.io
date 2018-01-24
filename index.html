@@ -1,146 +1,225 @@
----
-layout: default
----
-<header class="header">
-  <div class="avatar"></div>
-  <h1>Marat Fakhreev</h1>
-  <h3 class="about-me">
-    Hi, I am a crazy web developer located in Kazan, Russia.
-    <br/><br/>
-    I like CSS and Javascript, like writing both useful and not too much code in my free time. I'm a big fan of open source projects. Sometimes I work with Node.js and Ruby/Rails. Take a moment to explore crazy stuff from the web world.
-    <br/>
-    Kavabanga :)
-  </h3>
-  <div class="line"></div>
-</header>
+<!DOCTYPE html>
+<html>
 
-<section class="home-content">
-  <h2 class="posts-heading">Posts</h2>
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li class="post-item">
-        <h2>
-          <a class="post-link" href="{{ post.url }}">
-            <i class="fa fa-{{ post.type }} post-icon"></i>
-            {{ post.title }}
-          </a>
-        </h2>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-      </li>
-    {% endfor %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Marat Fakhreev's web site. Web, Javascript, Ruby on Rails developer.">
+  <title>Marat Fakhreev</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/stylesheets.css" />
+</head>
+
+<body>
+  <ul class="social">
+    <li class="social__item">
+      <a class="socail__link" href="https://github.com/maratfakhreev" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+    <li class="social__item">
+      <a class="socail__link" href="https://vk.com/marat.fakhreev" target="_blank">
+        <i class="fab fa-vk"></i>
+      </a>
+    </li>
+    <li class="social__item">
+      <a class="socail__link" href="https://www.linkedin.com/in/marat-fakhreev-b7629767" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+    <li class="social__item">
+      <a class="socail__link" href="https://medium.com/@maratfakhreev" target="_blank">
+        <i class="fab fa-medium-m"></i>
+      </a>
+    </li>
+    <li class="social__item">
+      <a class="socail__link" href="mailto:marat.fakhreev@gmail.com" target="_blank">
+        <i class="fas fa-at"></i>
+      </a>
+    </li>
+    <li class="social__item">
+      <a class="social__link" href="./Marat_Fakhreev_CV.pdf" target="_blank">
+        <div class="social__cv">CV</div>
+      </a>
+    </li>
   </ul>
 
-  <h2 class="os-heading">Open Source</h2>
-  <ul class="os-list">
-    <li class="os-item">
-      <h2>
-        <a class="os-link" href="https://github.com/fs/backbone-base" target="_blank">
-          <i class="fa fa-github os-icon"></i>
+  <header class="header">
+    <div class="header__avatar"></div>
+    <h1>Marat Fakhreev</h1>
+    <h3 class="header__about">
+      Hi, I am a crazy web developer located in Kazan, Russia.
+      <br/>
+      <br/>
+      I like CSS and Javascript, like writing both useful and not too much code in my free time. I'm a big fan of open source
+      projects. Sometimes I work with Node.js and Ruby/Rails. Take a moment to explore crazy stuff from the web world.
+      <br/>
+      Enjoy this site and read my <a class="link" href="https://medium.com/@maratfakhreev">blog</a> on medium. Kavabanga :)
+    </h3>
+    <div class="line"></div>
+  </header>
+
+  <main class="main">
+    <h2>Pet Projects</h2>
+    <ul class="list">
+      <li class="list__item">
+        <a class="list__link" href="http://daily-dev.com" target="_blank">
+          <i class="fas fa-paw list__icon"></i>
+          DailySheet
+        </a>
+        <ul class="list__pet">
+          <li class="list__pet-item">
+            <b class="list__pet-title">About:</b>
+            <p>Desktop application that accumulates useful feeds. Keeping you in touch with the latest news on technology. Whether you are a developer, manager, designer or just a cat lover
+            like us, there is something to catch your eye or mind.</p>
+          </li>
+          <li class="list__pet-item">
+            <b class="list__pet-title">Role:</b>
+            <p>Client app Developer, Website Front-end Developer.</p>
+          </li>
+          <li class="list__pet-item">
+            <b class="list__pet-title">Stack:</b>
+            <p>Electron, ES6, React/Redux, Ansible, vscale.io.</p>
+          </li>
+        </ul>
+      </li>
+      <li class="list__item">
+        <a class="list__link" href="http://stockroom-dev.herokuapp.com/" target="_blank">
+          <i class="fas fa-paw list__icon"></i>
+          Stockroom
+        </a>
+        <ul class="list__pet">
+          <li class="list__pet-item">
+            <b class="list__pet-title">About:</b>
+            <p>Service for accounting some goods via QR-codes. Primarily focused on owners of warehouses, stores and even offices that want
+            to count their things.</p>
+          </li>
+          <li class="list__pet-item">
+            <b class="list__pet-title">Role:</b>
+            <p>Front-end Developer.</p>
+          </li>
+          <li class="list__pet-item">
+            <b class="list__pet-title">Stack:</b>
+            <p>React-on-Rails, Webpack, Rails, Heroku.</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Open Source</h2>
+    <ul class="list">
+      <li class="list__item">
+        <a class="list__link" href="https://github.com/fs/backbone-base" target="_blank">
+          <i class="fab fa-github list__icon"></i>
           Backbone-base
         </a>
-      </h2>
-      <span class="post-meta">
-        Backbone.Marionette modern skeleton based on ES6/ES7, Backbone.Marionette, Browserify technologies.
-      </span>
-    </li>
-    <li class="os-item">
-      <h2>
-        <a class="os-link" href="https://github.com/fs/react-base" target="_blank">
-          <i class="fa fa-github os-icon"></i>
+        <div class="list__text">
+          Backbone.Marionette modern skeleton based on ES6/ES7, Backbone.Marionette, Browserify technologies.
+        </div>
+      </li>
+      <li class="list__item">
+        <a class="list__link" href="https://github.com/fs/react-base" target="_blank">
+          <i class="fab fa-github list__icon"></i>
           React-base
         </a>
-      </h2>
-      <span class="post-meta">
-        Kick-start your new web application based on ES6/ES7, React and Flux technologies.
-      </span>
-    </li>
-    <li class="os-item">
-      <h2>
-        <a class="os-link" href="https://github.com/maratfakhreev/electron-react-starter-kit" target="_blank">
-          <i class="fa fa-github os-icon"></i>
+        <div class="list__text">
+          Kick-start your new web application based on ES6/ES7, React and Flux technologies.
+        </div>
+      </li>
+      <li class="list__item">
+        <a class="list__link" href="https://github.com/maratfakhreev/electron-react-starter-kit" target="_blank">
+          <i class="fab fa-github list__icon"></i>
           Electron React Starter Kit
         </a>
-      </h2>
-      <span class="post-meta">
-        Kick-start your desktop application for MacOS/Windows/Linux based on Electron, React and Flux technologies.
-      </span>
-    </li>
-    <li class="os-item">
-      <h2>
-        <a class="os-link" href="https://github.com/maratfakhreev/react-native-starter-kit" target="_blank">
-          <i class="fa fa-github os-icon"></i>
+        <div class="list__text">
+          Kick-start your desktop application for MacOS/Windows/Linux based on Electron, React and Flux technologies.
+        </div>
+      </li>
+      <li class="list__item">
+        <a class="list__link" href="https://github.com/maratfakhreev/react-native-starter-kit" target="_blank">
+          <i class="fab fa-github list__icon"></i>
           React Native Starter Kit
         </a>
-      </h2>
-      <span class="post-meta">
-        Simple starter kit for mobile applications based on ES6, React Native and Flux technologies.
-      </span>
-    </li>
-    <li class="os-item">
-      <h2>
-        <a class="os-link" href="https://github.com/maratfakhreev/backbone-es6-promise" target="_blank">
-          <i class="fa fa-github os-icon"></i>
+        <div class="list__text">
+          Simple starter kit for mobile applications based on ES6, React Native and Flux technologies.
+        </div>
+      </li>
+      <li class="list__item">
+        <a class="list__link" href="https://github.com/maratfakhreev/backbone-es6-promise" target="_blank">
+          <i class="fab fa-github list__icon"></i>
           Backbone ES6 promise
         </a>
-      </h2>
-      <span class="post-meta">
-        A plugin for Backbone.js that overrides default promises with modern ES6 promises.
-      </span>
-    </li>
-    <li class="os-item">
-      <h2>
-        <a class="os-link" href="https://github.com/maratfakhreev/marionette-animated-region" target="_blank">
-          <i class="fa fa-github os-icon"></i>
+        <div class="list__text">
+          A plugin for Backbone.js that overrides default promises with modern ES6 promises.
+        </div>
+      </li>
+      <li class="list__item">
+        <a class="list__link" href="https://github.com/maratfakhreev/marionette-animated-region" target="_blank">
+          <i class="fab fa-github list__icon"></i>
           Marionette animated region
         </a>
-      </h2>
-      <span class="post-meta">
-        Backbone.Marionette animated region is convinient animated plugin based on Velocity.js. It provides you to create beautiful animation effects for your Marionette views.
-      </span>
-    </li>
-    <li class="os-item">
-      <h2>
-        <a class="os-link" href="https://github.com/maratfakhreev/marionette-routes-helper" target="_blank">
-          <i class="fa fa-github os-icon"></i>
+        <div class="list__text">
+          Backbone.Marionette animated region is convinient animated plugin based on Velocity.js. It provides you to create beautiful
+          animation effects for your Marionette views.
+        </div>
+      </li>
+      <li class="list__item">
+        <a class="list__link" href="https://github.com/maratfakhreev/marionette-routes-helper" target="_blank">
+          <i class="fab fa-github list__icon"></i>
           Marionette routes helper
         </a>
-      </h2>
-      <span class="post-meta">
-        Backbone.Marionette routes helper add helper methods for your Backbone.Marionette app routes.
-      </span>
-    </li>
-    <li class="os-item">
-      <h2>
-        <a class="os-link" href="https://github.com/maratfakhreev/react-apple" target="_blank">
-          <i class="fa fa-github os-icon"></i>
-          React Apple
-        </a>
-      </h2>
-      <span class="post-meta">
-        React Apple component. Why? React Apple makes your code better because Apple makes the world better!
-      </span>
-    </li>
-    <li class="os-item">
-      <h2>
-        <a class="os-link" href="https://github.com/maratfakhreev/slush-npm-package" target="_blank">
-          <i class="fa fa-github os-icon"></i>
+        <div class="list__text">
+          Backbone.Marionette routes helper add helper methods for your Backbone.Marionette app routes.
+        </div>
+      </li>
+      <li class="list__item">
+        <a class="list__link" href="https://github.com/maratfakhreev/slush-npm-package" target="_blank">
+          <i class="fab fa-github list__icon"></i>
           Slush npm package generator
         </a>
-      </h2>
-      <span class="post-meta">
-        A Slush generator for Node.js ES6 npm package. Includes ES2015 babel preset and babel polyfill, console and browser test environment (chai, mocha, phantomjs, eslint)
-      </span>
-    </li>
-    <li class="os-item">
-      <h2>
-        <a class="os-link" href="https://github.com/maratfakhreev/jquery-pixel-perfect" target="_blank">
-          <i class="fa fa-github os-icon"></i>
+        <div class="list__text">
+          A Slush generator for Node.js ES6 npm package. Includes ES2015 babel preset and babel polyfill, console and browser test
+          environment (chai, mocha, phantomjs, eslint)
+        </div>
+      </li>
+      <li class="list__item">
+        <a class="list__link" href="https://github.com/maratfakhreev/jquery-pixel-perfect" target="_blank">
+          <i class="fab fa-github list__icon"></i>
           jQuery pixel perfect
         </a>
-      </h2>
-      <span class="post-meta">
-        jQuery-Pixel-Perfect is a small plugin that conveniently allows you to transpose a design layout over a developed site. With this tool you do not need to make measurements and you can write CSS code that pixel-matches to the design layout.
-      </span>
-    </li>
-  </ul>
-</section>
+        <div class="list__text">
+          jQuery-Pixel-Perfect is a small plugin that conveniently allows you to transpose a design layout over a developed site. With
+          this tool you do not need to make measurements and you can write CSS code that pixel-matches to the design layout.
+        </div>
+      </li>
+    </ul>
+  </main>
+
+  <footer class="footer">
+    <div class="line"></div>
+    <p class="footer__text">
+      © Copyright Marat Fakhreev
+    </p>
+  </footer>
+
+  <script>
+    (function() {
+      const currentYear = new Date().getFullYear();
+
+      document.querySelector('.footer__text').innerHTML = `© Copyright 2016 - ${currentYear} Marat Fakhreev`;
+    })();
+
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-71744778-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+
+</html>
