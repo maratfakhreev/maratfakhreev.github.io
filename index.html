@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon.png" />
   <link rel="apple-touch-icon" sizes="57x57" href="avatar.png" />
   <link rel="apple-touch-icon" sizes="114x114" href="avatar.png" />
-  <link rel="stylesheet" href="/stylesheets.css" />
+  <link rel="stylesheet" href="stylesheets.css" />
 </head>
 
 <body>
@@ -21,13 +21,13 @@
       </a>
     </li>
     <li class="social__item">
-      <a class="socail__link" href="https://vk.com/marat.fakhreev" target="_blank">
-        <i class="fab fa-vk"></i>
+      <a class="socail__link" href="https://instagram.com/maratfakhreev" target="_blank">
+        <i class="fab fa-instagram"></i>
       </a>
     </li>
     <li class="social__item">
       <a class="socail__link" href="https://www.linkedin.com/in/marat-fakhreev-b7629767" target="_blank">
-        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li class="social__item">
@@ -37,12 +37,12 @@
     </li>
     <li class="social__item">
       <a class="socail__link" href="mailto:marat.fakhreev@gmail.com">
-        <i class="fas fa-at"></i>
+        <i class="far fa-envelope"></i>
       </a>
     </li>
     <li class="social__item">
-      <a class="social__link" href="./Marat_Fakhreev_CV.pdf" target="_blank">
-        <div class="social__cv">CV</div>
+      <a class="social__link" href="./Marat_Fakhreev_CV.pdf" target="_blank" style="font-size: 1rem">
+        <i class="far fa-address-card"></i>
       </a>
     </li>
   </ul>
@@ -54,7 +54,7 @@
       Hi, I am a crazy web developer located in Kazan, Russia.
       <br/>
       <br/>
-      I like CSS and Javascript, like writing both useful and not too much code in my free time. I'm a big fan of open source
+      I like CSS and Javascript (recently have added Typescript into my arsenal), like writing both useful and not too much code in my free time. I'm a big fan of open source
       projects. Sometimes I work with Node.js and Ruby/Rails. Take a moment to explore crazy stuff from the web world.
       <br/>
       Enjoy this site and read my <a class="link" href="https://medium.com/@maratfakhreev" target="_blank">blog</a> on medium. Kavabanga :)
@@ -63,139 +63,89 @@
   </header>
 
   <main class="main">
-    <h2>Pet Projects</h2>
-    <ul class="list">
-      <li class="list__item">
-        <a class="list__link" href="http://daily-dev.com" target="_blank">
-          <i class="fas fa-paw list__icon"></i>
-          DailySheet
-        </a>
-        <ul class="list__pet">
-          <li class="list__pet-item">
-            <b class="list__pet-title">About:</b>
-            <p>Desktop application that accumulates useful feeds. Keeping you in touch with the latest news on technology. Whether you are a developer, manager, designer or just a cat lover
-            like us, there is something to catch your eye or mind.</p>
-          </li>
-          <li class="list__pet-item">
-            <b class="list__pet-title">Role:</b>
-            <p>Client app Developer, Website Front-end Developer.</p>
-          </li>
-          <li class="list__pet-item">
-            <b class="list__pet-title">Stack:</b>
-            <p>Electron, ES6, React/Redux, Ansible, vscale.io.</p>
-          </li>
-        </ul>
-      </li>
-      <li class="list__item">
-        <a class="list__link" href="http://stockroom-dev.herokuapp.com/" target="_blank">
-          <i class="fas fa-paw list__icon"></i>
-          Stockroom
-        </a>
-        <ul class="list__pet">
-          <li class="list__pet-item">
-            <b class="list__pet-title">About:</b>
-            <p>Service for accounting some goods via QR-codes. Primarily focused on owners of warehouses, stores and even offices that want
-            to count their things.</p>
-          </li>
-          <li class="list__pet-item">
-            <b class="list__pet-title">Role:</b>
-            <p>Front-end Developer.</p>
-          </li>
-          <li class="list__pet-item">
-            <b class="list__pet-title">Stack:</b>
-            <p>React-on-Rails, Webpack, Rails, Heroku.</p>
-          </li>
-        </ul>
-      </li>
-    </ul>
+    <section class="content">
+      <h2>Open Source</h2>
+      <p class="block perspective">
+        <i class="fab fa-github perspective__icon"></i>
+        Projects to which I've contributed:
+        <a class="link" href="https://github.com/gaearon/react-hot-loader" target="_blank">React hot loader</a>,
+        <a class="link" href="https://github.com/marionettejs/backbone.marionette" target="_blank">Marionette.js</a>,
+        <a class="link" href="https://github.com/jeremyruppel/underscore.inflection" target="_blank">Underscore inflection</a>,
+        <a class="link" href="https://github.com/sidorares/pugify" target="_blank">Pugify</a>,
+        <a class="link" href="https://github.com/fs/rails-base-api" target="_blank">Rails base API</a>,
+        <a class="link" href="https://github.com/sagold/handlebars-webpack-plugin" target="_blank">Handlebars webpack plugin</a>.
+        <br />
+        <br />
+        My main OS projects where I was or still the core contributor:
+        <a class="link" href="https://github.com/fs/react-base" target="_blank">React-base</a>,
+        <a class="link" href="https://github.com/maratfakhreev/react-native-starter-kit" target="_blank">React Native
+          Starter Kit</a>,
+        <a class="link" href="https://github.com/maratfakhreev/web-starter-kit" target="_blank">Web starter kit</a>,
+        <a class="link" href="https://github.com/fs/backbone-base" target="_blank">Backbone-base</a>,
+        <a class="link" href="https://github.com/maratfakhreev/backbone-es6-promise" target="_blank">Backbone ES6
+          promise</a>,
+        <a class="link" href="https://github.com/maratfakhreev/marionette-animated-region" target="_blank">Marionette
+          animated region</a>,
+        <a class="link" href="https://github.com/maratfakhreev/marionette-routes-helper" target="_blank">Marionette routes
+          helper</a>,
+        <a class="link" href="https://github.com/maratfakhreev/node-telegram-random-message-replier" target="_blank">Node telegram random message replier</a>,
+        <a class="link" href="https://github.com/maratfakhreev/slush-npm-package" target="_blank">Slush npm package
+          generator</a>,
+        <a class="link" href="https://github.com/maratfakhreev/jquery-pixel-perfect" target="_blank">jQuery pixel
+          perfect</a>.
+        <br />
+        <br />
+        You can find more details on my <a href="https://github.com/maratfakhreev">GitHub</a>.
+      </p>
+    </section>
 
-    <h2>Open Source</h2>
-    <ul class="list">
-      <li class="list__item">
-        <a class="list__link" href="https://github.com/fs/backbone-base" target="_blank">
-          <i class="fab fa-github list__icon"></i>
-          Backbone-base
-        </a>
-        <div class="list__text">
-          Backbone.Marionette modern skeleton based on ES6/ES7, Backbone.Marionette, Browserify technologies.
-        </div>
-      </li>
-      <li class="list__item">
-        <a class="list__link" href="https://github.com/fs/react-base" target="_blank">
-          <i class="fab fa-github list__icon"></i>
-          React-base
-        </a>
-        <div class="list__text">
-          Kick-start your new web application based on ES6/ES7, React and Flux technologies.
-        </div>
-      </li>
-      <li class="list__item">
-        <a class="list__link" href="https://github.com/maratfakhreev/electron-react-starter-kit" target="_blank">
-          <i class="fab fa-github list__icon"></i>
-          Electron React Starter Kit
-        </a>
-        <div class="list__text">
-          Kick-start your desktop application for MacOS/Windows/Linux based on Electron, React and Flux technologies.
-        </div>
-      </li>
-      <li class="list__item">
-        <a class="list__link" href="https://github.com/maratfakhreev/react-native-starter-kit" target="_blank">
-          <i class="fab fa-github list__icon"></i>
-          React Native Starter Kit
-        </a>
-        <div class="list__text">
-          Simple starter kit for mobile applications based on ES6, React Native and Flux technologies.
-        </div>
-      </li>
-      <li class="list__item">
-        <a class="list__link" href="https://github.com/maratfakhreev/backbone-es6-promise" target="_blank">
-          <i class="fab fa-github list__icon"></i>
-          Backbone ES6 promise
-        </a>
-        <div class="list__text">
-          A plugin for Backbone.js that overrides default promises with modern ES6 promises.
-        </div>
-      </li>
-      <li class="list__item">
-        <a class="list__link" href="https://github.com/maratfakhreev/marionette-animated-region" target="_blank">
-          <i class="fab fa-github list__icon"></i>
-          Marionette animated region
-        </a>
-        <div class="list__text">
-          Backbone.Marionette animated region is convinient animated plugin based on Velocity.js. It provides you to create beautiful
-          animation effects for your Marionette views.
-        </div>
-      </li>
-      <li class="list__item">
-        <a class="list__link" href="https://github.com/maratfakhreev/marionette-routes-helper" target="_blank">
-          <i class="fab fa-github list__icon"></i>
-          Marionette routes helper
-        </a>
-        <div class="list__text">
-          Backbone.Marionette routes helper add helper methods for your Backbone.Marionette app routes.
-        </div>
-      </li>
-      <li class="list__item">
-        <a class="list__link" href="https://github.com/maratfakhreev/slush-npm-package" target="_blank">
-          <i class="fab fa-github list__icon"></i>
-          Slush npm package generator
-        </a>
-        <div class="list__text">
-          A Slush generator for Node.js ES6 npm package. Includes ES2015 babel preset and babel polyfill, console and browser test
-          environment (chai, mocha, phantomjs, eslint)
-        </div>
-      </li>
-      <li class="list__item">
-        <a class="list__link" href="https://github.com/maratfakhreev/jquery-pixel-perfect" target="_blank">
-          <i class="fab fa-github list__icon"></i>
-          jQuery pixel perfect
-        </a>
-        <div class="list__text">
-          jQuery-Pixel-Perfect is a small plugin that conveniently allows you to transpose a design layout over a developed site. With
-          this tool you do not need to make measurements and you can write CSS code that pixel-matches to the design layout.
-        </div>
-      </li>
-    </ul>
+    <section class="content">
+      <h2>Pet Projects</h2>
+      <ul class="list">
+        <li class="list__item perspective">
+          <i class="fas fa-paw perspective__icon"></i>
+          <a class="list__link" href="http://daily-dev.com" target="_blank">
+            DailySheet
+          </a>
+          <ul class="list__pet">
+            <li class="list__pet-item">
+              <b class="list__pet-title">About:</b>
+              <p>Desktop application that accumulates useful feeds. Keeping you in touch with the latest news on technology. Whether you are a developer, manager, designer or just a cat lover
+              like us, there is something to catch your eye or mind.</p>
+            </li>
+            <li class="list__pet-item">
+              <b class="list__pet-title">Role:</b>
+              <p>Client app Developer, Website Front-end Developer.</p>
+            </li>
+            <li class="list__pet-item">
+              <b class="list__pet-title">Stack:</b>
+              <p>Electron, ES6, React/Redux, Ansible, vscale.io.</p>
+            </li>
+          </ul>
+        </li>
+        <li class="list__item perspective">
+          <i class="fas fa-paw perspective__icon"></i>
+          <a class="list__link" href="http://stockroom-dev.herokuapp.com/" target="_blank">
+            Stockroom
+          </a>
+          <ul class="list__pet">
+            <li class="list__pet-item">
+              <b class="list__pet-title">About:</b>
+              <p>Service for accounting some goods via QR-codes. Primarily focused on owners of warehouses, stores and even offices that want
+              to count their things.</p>
+            </li>
+            <li class="list__pet-item">
+              <b class="list__pet-title">Role:</b>
+              <p>Front-end Developer.</p>
+            </li>
+            <li class="list__pet-item">
+              <b class="list__pet-title">Stack:</b>
+              <p>React-on-Rails, Webpack, Rails, Heroku.</p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
   </main>
 
   <footer class="footer">
