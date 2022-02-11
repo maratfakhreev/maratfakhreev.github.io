@@ -1,432 +1,488 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Marat Fakhreev's web site. Web developer." />
+    <title>Marat Fakhreev</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.icon" />
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" rel="stylesheet" />
+    <style>
+      /* Base */
+      :root {
+        --font-family: DM Sans, sans-serif;
+        --white: #fff;
+        --bg-color: #f7f8f9;
+        --main-color: rgba(0, 0, 0, 0.8);
+        --second-color: #80806f;
+        --border-color: rgba(var(--second-color), 0.5);
+      }
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Marat Fakhreev's web site. Web developer.">
-  <title>Marat Fakhreev</title>
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png" />
-  <link rel="apple-touch-icon" sizes="57x57" href="avatar.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="avatar.png" />
-  <style>
-    @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+      * {
+        box-sizing: border-box;
+      }
 
-    @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/fontawesome.min.css");
-    @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/brands.min.css");
-    @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/regular.min.css");
-    @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/solid.min.css");
-
-    /* Base */
-    :root {
-      --font-family: Lato, Arial, sans-serif;
-      --white: #fff;
-      --bg-color: #f7f8f9;
-      --main-color: rgba(0, 0, 0, .8);
-      --second-color: #80806f;
-      --border-color: rgba(var(--second-color), .5);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      -webkit-overflow-scrolling: touch;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-      background-color: var(--bg-color);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      font-family: var(--font-family);
-      line-height: 1.5;
-      color: var(--main-color);
-      border-top: 3px solid var(--second-color);
-      margin: 0;
-    }
-
-    @media (max-width: 600px) {
       body {
-        padding: .5rem 1rem;
-      }
-    }
-
-    @media (min-width: 600px) and (max-width: 950px) {
-      body {
-        padding: 1.25rem;
-      }
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin: 1rem 0;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      text-align: center;
-      margin: 5rem 0 1.25rem;
-    }
-
-    h3 {
-      font-size: 1.1rem;
-      margin: .25rem 0;
-    }
-
-    ul {
-      margin: 0;
-      padding: 0;
-    }
-
-    p {
-      margin: 0;
-    }
-
-    b {
-      display: inline-block;
-    }
-
-    a {
-      text-decoration: none;
-      transition: all .3s ease;
-      color: var(--second-color);
-    }
-
-    a:hover {
-      transition: all .3s ease;
-      color: var(--main-color);
-    }
-
-    /* Index */
-    .header,
-    .main,
-    .footer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 640px;
-    }
-
-    .header,
-    .footer {
-      margin: 7rem 0 0 0;
-    }
-
-    .header__about {
-      color: var(--second-color);
-      font-weight: 300;
-      margin-bottom: 2.5rem;
-      text-align: center;
-    }
-
-    .header__avatar {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      background-image: url("/avatar.jpg");
-      background-size: cover;
-      transition: all .3s ease;
-      position: relative;
-    }
-
-    .header__avatar:hover {
-      transform: scale(1.1, 1.1);
-      transition: all .3s ease;
-    }
-
-    .header__link {
-      text-decoration: none;
-      transition: all .3s ease;
-      color: var(--main-color);
-    }
-
-    .header__link:hover {
-      transition: all .3s ease;
-      color: var(--second-color);
-    }
-
-    .footer__text {
-      color: var(--second-color);
-      font-size: .9rem;
-      padding: 1.5rem;
-      margin: 0;
-    }
-
-    .line {
-      background-color: var(--second-color);
-      height: 1px;
-      width: 300px;
-    }
-
-    .social {
-      padding: 0;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      height: 50px;
-    }
-
-    .social__item {
-      list-style: none;
-      margin: 0 .75rem;
-    }
-
-    @media (max-width: 950px) {
-      .social__item {
-        margin: 0 1rem;
-      }
-    }
-
-    .social__link {
-      font-size: 1.1rem;
-      text-decoration: none;
-    }
-
-    @media (max-width: 950px) {
-      .social__link {
-        font-size: 1.2rem;
-      }
-    }
-
-    .content {
-      width: 100%;
-      padding: 0 1rem;
-    }
-
-    .block {
-      padding: 0 0 0 3rem;
-      margin-bottom: .75rem;
-      position: relative;
-    }
-
-    .list {
-      width: 100%;
-    }
-
-    .list__item {
-      padding: 0 0 0 3rem;
-      margin: 0 0 1.5rem 0;
-      list-style: none;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .list__pet {
-      list-style-type: none;
-    }
-
-    .list__pet-title {
-      min-width: 60px;
-    }
-
-    .list__pet-item {
-      display: flex;
-      margin-bottom: .5rem;
-    }
-
-    @media (max-width: 600px) {
-      .list__pet-item {
+        -webkit-overflow-scrolling: touch;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        background-color: var(--bg-color);
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        font-family: var(--font-family);
+        line-height: 1.5;
+        color: var(--main-color);
+        border-top: 3px solid var(--second-color);
+        margin: 0;
       }
-    }
 
-    .list__link {
-      display: block;
-      font-weight: bold;
-      font-size: 1.2rem;
-      margin: 0 0 .5rem 0;
-    }
+      @media (max-width: 600px) {
+        body {
+          padding: 0.5rem 1rem;
+        }
+      }
 
-    .list__link:hover .list__icon {
-      transform: scale(1.2, 1.2);
-      transition: all .3s ease;
-    }
+      @media (min-width: 600px) and (max-width: 950px) {
+        body {
+          padding: 1.25rem;
+        }
+      }
 
-    .perspective:hover .perspective__icon {
-      transform: rotateZ(45deg);
-      transition: all .3s ease;
-    }
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 1rem 0;
+      }
 
-    .perspective__icon {
-      width: 30px;
-      height: 30px;
-      border: 1px solid rgba(153, 153, 136, .5);
-      border-radius: 50%;
-      line-height: 28px;
-      font-size: 1.2rem;
-      text-align: center;
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      background-color: var(--white);
-      color: var(--second-color);
-      transition: all .3s ease;
-    }
-  </style>
-</head>
+      h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-align: center;
+        margin: 5rem 0 1.25rem;
+      }
 
-<body>
-  <ul class="social">
-    <li class="social__item">
-      <a class="socail__link" href="https://github.com/maratfakhreev" target="_blank">
-        <i class="fab fa-github"></i>
-      </a>
-    </li>
-    <li class="social__item">
-      <a class="socail__link" href="https://instagram.com/maratfakhreev" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </li>
-    <li class="social__item">
-      <a class="socail__link" href="https://www.linkedin.com/in/marat-fakhreev-b7629767" target="_blank">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-    </li>
-    <li class="social__item">
-      <a class="socail__link" href="https://medium.com/@maratfakhreev" target="_blank">
-        <i class="fab fa-medium-m"></i>
-      </a>
-    </li>
-    <li class="social__item">
-      <a class="socail__link" href="mailto:marat.fakhreev@gmail.com">
-        <i class="far fa-envelope"></i>
-      </a>
-    </li>
-    <li class="social__item">
-      <a class="social__link" href="./Marat_Fakhreev_CV.pdf" target="_blank" style="font-size: 1rem">
-        <i class="far fa-address-card"></i>
-      </a>
-    </li>
-  </ul>
+      h3 {
+        font-size: 1.1rem;
+        font-weight: 400;
+        margin: 0.25rem 0;
+      }
 
-  <header class="header">
-    <div class="header__avatar"></div>
-    <h1>Marat Fakhreev</h1>
-    <h3 class="header__about">
-      Hi, I am a crazy web developer located in Kazan, Russia.
-      <br/>
-      <br/>
-      I like CSS and Javascript (recently have added Typescript into my arsenal), like writing both useful and not too much code in my free time. I'm a big fan of open source
-      projects. Sometimes I work with Node.js and Ruby/Rails. Take a moment to explore crazy stuff from the web world.
-      <br/>
-      Enjoy this site and read my <a class="header__link" href="https://medium.com/@maratfakhreev" target="_blank">blog</a> on medium. Kavabanga :)
-    </h3>
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      b {
+        display: inline-block;
+      }
+
+      a {
+        text-decoration: none;
+        transition: all 0.3s ease;
+        color: var(--second-color);
+      }
+
+      a:hover {
+        transition: all 0.3s ease;
+        color: var(--main-color);
+      }
+
+      /* Index */
+      .header,
+      .main,
+      .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 720px;
+      }
+
+      .header {
+        margin: 7rem 0 0;
+      }
+
+      .main {
+        margin: 0 0 7rem;
+      }
+
+      .header__about {
+        color: var(--second-color);
+        font-weight: 300;
+        margin-bottom: 2.5rem;
+      }
+
+      .header__avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-image: url('/avatar.jpg');
+        background-size: cover;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .header__avatar:hover {
+        transform: scale(1.1, 1.1);
+        transition: all 0.3s ease;
+      }
+
+      .header__link {
+        text-decoration: none;
+        transition: all 0.3s ease;
+        color: var(--main-color);
+      }
+
+      .header__link:hover {
+        transition: all 0.3s ease;
+        color: var(--second-color);
+      }
+
+      .footer__text {
+        color: var(--second-color);
+        font-size: 0.9rem;
+        padding: 1.5rem;
+        margin: 0;
+      }
+
+      .line {
+        background-color: var(--second-color);
+        height: 1px;
+        width: 500px;
+      }
+
+      @media (max-width: 600px) {
+        .line {
+          width: 100%;
+        }
+      }
+
+      .social {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        height: 50px;
+      }
+
+      .social__item {
+        list-style: none;
+        margin: 0 0.75rem;
+      }
+
+      @media (max-width: 950px) {
+        .social__item {
+          margin: 0 0.8rem;
+        }
+      }
+
+      .social__link {
+        font-size: 1.1rem;
+      }
+
+      @media (max-width: 950px) {
+        .social__link {
+          font-size: 1.2rem;
+        }
+      }
+
+      .block {
+        padding: 0 3rem;
+        margin-bottom: 0.75rem;
+        position: relative;
+      }
+
+      @media (max-width: 600px) {
+        .block {
+          padding: 0;
+        }
+      }
+
+      .list {
+        width: 100%;
+      }
+
+      .list__item {
+        padding: 0 3rem;
+        margin: 0 0 1.5rem 0;
+        list-style: none;
+        position: relative;
+        overflow: hidden;
+      }
+
+      @media (max-width: 600px) {
+        .list__item {
+          padding: 0;
+        }
+      }
+
+      .list__pet {
+        list-style-type: none;
+      }
+
+      .list__pet-title {
+        min-width: 60px;
+      }
+
+      .list__pet-item {
+        display: flex;
+        margin-bottom: 0.5rem;
+      }
+
+      @media (max-width: 600px) {
+        .list__pet-item {
+          flex-direction: column;
+        }
+      }
+
+      .list__link {
+        display: inline-block;
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin: 0 0 0.5rem 0;
+      }
+
+      .list__link:hover .list__icon {
+        transform: scale(1.2, 1.2);
+        transition: all 0.3s ease;
+      }
+
+      .perspective:hover .perspective__icon {
+        transform: rotateZ(45deg);
+        transition: all 0.3s ease;
+      }
+
+      .perspective__icon,
+      .perspective__icon-paw {
+        display: block;
+        width: 30px;
+        height: 30px;
+        border: 1px solid rgba(153, 153, 136, 0.5);
+        border-radius: 50%;
+        line-height: 28px;
+        font-size: 1.2rem;
+        text-align: center;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        background-color: var(--white);
+        color: var(--second-color);
+        transition: all 0.3s ease;
+      }
+
+      @media (max-width: 600px) {
+        .perspective__icon,
+        .perspective__icon-paw {
+          position: relative;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .perspective__icon {
+          margin: 0 0 0.5rem 0;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .perspective__icon-paw {
+          display: inline-block;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <ul class="social">
+      <li class="social__item">
+        <a class="social__link" href="https://github.com/maratfakhreev" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="https://twitter.com/maratfakhreev" target="_blank">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="https://instagram.com/maratfakhreev" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="https://www.linkedin.com/in/marat-fakhreev-b7629767" target="_blank">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="https://medium.com/@maratfakhreev" target="_blank">
+          <i class="fa-brands fa-medium-m"></i>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="mailto:marat.fakhreev@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="./Marat_Fakhreev_CV.pdf" target="_blank" style="font-size: 1rem">
+          <i class="fa-solid fa-address-card"></i>
+        </a>
+      </li>
+    </ul>
+
+    <header class="header">
+      <div class="header__avatar"></div>
+      <h1>Marat Fakhreev</h1>
+      <section>
+        <div class="block">
+          <h3 class="header__about">
+            Hi, I am a crazy web developer located in Kazan, Russia.
+            <br />
+            <br />
+            I like CSS, Javascript and absolutely everything related to these technologies in the world of web and
+            mobile development. I like writing both useful and not too much code in my free time. I'm a big fan of open
+            source projects. Take a moment to explore crazy and demanded things from the programming world and the real
+            world as well.
+            <br />
+            Enjoy this site and read my
+            <a class="header__link" href="https://medium.com/@maratfakhreev" target="_blank">blog</a>
+            on medium. Kavabanga :)
+          </h3>
+        </div>
+      </section>
+    </header>
+
     <div class="line"></div>
-  </header>
 
-  <main class="main">
-    <section class="content">
-      <h2>Open Source</h2>
-      <p class="block perspective">
-        <i class="fab fa-github perspective__icon"></i>
-        Projects to which I've contributed:
-        <a href="https://github.com/gaearon/react-hot-loader" target="_blank">React hot loader</a>,
-        <a href="https://github.com/marionettejs/backbone.marionette" target="_blank">Marionette.js</a>,
-        <a href="https://github.com/jeremyruppel/underscore.inflection" target="_blank">Underscore inflection</a>,
-        <a href="https://github.com/sidorares/pugify" target="_blank">Pugify</a>,
-        <a href="https://github.com/fs/rails-base-api" target="_blank">Rails base API</a>,
-        <a href="https://github.com/sagold/handlebars-webpack-plugin" target="_blank">Handlebars webpack plugin</a>.
-        <br />
-        <br />
-        My main OS projects where I was or still the core contributor:
-        <a href="https://github.com/fs/react-base" target="_blank">React-base</a>,
-        <a href="https://github.com/maratfakhreev/react-native-starter-kit" target="_blank">React Native
-          Starter Kit</a>,
-        <a href="https://github.com/maratfakhreev/web-starter-kit" target="_blank">Web starter kit</a>,
-        <a href="https://github.com/fs/backbone-base" target="_blank">Backbone-base</a>,
-        <a href="https://github.com/maratfakhreev/backbone-es6-promise" target="_blank">Backbone ES6
-          promise</a>,
-        <a href="https://github.com/maratfakhreev/marionette-animated-region" target="_blank">Marionette
-          animated region</a>,
-        <a href="https://github.com/maratfakhreev/marionette-routes-helper" target="_blank">Marionette routes
-          helper</a>,
-        <a href="https://github.com/maratfakhreev/node-telegram-random-message-replier" target="_blank">Node telegram random message replier</a>,
-        <a href="https://github.com/maratfakhreev/slush-npm-package" target="_blank">Slush npm package
-          generator</a>,
-        <a href="https://github.com/maratfakhreev/jquery-pixel-perfect" target="_blank">jQuery pixel
-          perfect</a>.
-        <br />
-        <br />
-        You can find more details on my <a href="https://github.com/maratfakhreev" target="_blank">GitHub</a>.
-      </p>
-    </section>
+    <main class="main">
+      <section>
+        <h2>Open Source</h2>
+        <p class="block perspective">
+          <i class="fa-brands fa-github perspective__icon"></i>
+          Projects to which I've contributed:
+          <a href="https://github.com/gaearon/react-hot-loader" target="_blank">React hot loader</a>,
+          <a href="https://github.com/sagold/handlebars-webpack-plugin" target="_blank">Handlebars webpack plugin</a>.
+          <a href="https://github.com/marionettejs/backbone.marionette" target="_blank">Marionette.js</a>,
+          <a href="https://github.com/jeremyruppel/underscore.inflection" target="_blank">Underscore inflection</a>,
+          <a href="https://github.com/sidorares/pugify" target="_blank">Pugify</a>,
+          <br />
+          <br />
+          My main OS projects where I was or still the core contributor:
+          <a href="https://github.com/fs/react-base" target="_blank">React-base</a>,
+          <a href="https://github.com/maratfakhreev/web-starter-kit" target="_blank">Web starter kit</a>,
+          <a href="https://github.com/fs/backbone-base" target="_blank">Backbone-base</a>,
+          <a href="https://github.com/maratfakhreev/backbone-es6-promise" target="_blank">Backbone ES6 promise</a>,
+          <a href="https://github.com/maratfakhreev/marionette-animated-region" target="_blank"
+            >Marionette animated region</a
+          >,
+          <a href="https://github.com/maratfakhreev/marionette-routes-helper" target="_blank"
+            >Marionette routes helper</a
+          >,
+          <a href="https://github.com/maratfakhreev/node-telegram-random-message-replier" target="_blank"
+            >Node telegram random message replier</a
+          >,
+          <a href="https://github.com/maratfakhreev/slush-npm-package" target="_blank">Slush npm package generator</a>,
+          <a href="https://github.com/maratfakhreev/jquery-pixel-perfect" target="_blank">jQuery pixel perfect</a>.
+          <br />
+          <br />
+          You can find more details on my
+          <a href="https://github.com/maratfakhreev" target="_blank">GitHub</a>.
+        </p>
+      </section>
 
-    <section class="content">
-      <h2>Pet Projects</h2>
-      <ul class="list">
-        <li class="list__item perspective">
-          <i class="fas fa-paw perspective__icon"></i>
-          <a class="list__link" href="http://daily-dev.com" target="_blank">
-            DailySheet
-          </a>
-          <ul class="list__pet">
-            <li class="list__pet-item">
-              <b class="list__pet-title">About:</b>
-              <p>Desktop application that accumulates useful feeds. Keeping you in touch with the latest news on technology. Whether you are a developer, manager, designer or just a cat lover
-              like us, there is something to catch your eye or mind.</p>
-            </li>
-            <li class="list__pet-item">
-              <b class="list__pet-title">Role:</b>
-              <p>Client app Developer, Website Front-end Developer.</p>
-            </li>
-            <li class="list__pet-item">
-              <b class="list__pet-title">Stack:</b>
-              <p>Electron, Typescript, React (with hooks)/Redux, Styled components, Webpack, Ansible, vscale.io.</p>
-            </li>
-          </ul>
-        </li>
-        <li class="list__item perspective">
-          <i class="fas fa-paw perspective__icon"></i>
-          <a class="list__link" href="http://stockroom-dev.herokuapp.com/" target="_blank">
-            Stockroom
-          </a>
-          <ul class="list__pet">
-            <li class="list__pet-item">
-              <b class="list__pet-title">About:</b>
-              <p>Service for accounting some goods via QR-codes. Primarily focused on owners of warehouses, stores and even offices that want
-              to count their things.</p>
-            </li>
-            <li class="list__pet-item">
-              <b class="list__pet-title">Role:</b>
-              <p>Front-end Developer.</p>
-            </li>
-            <li class="list__pet-item">
-              <b class="list__pet-title">Stack:</b>
-              <p>React-on-Rails, Webpack, Rails, Heroku.</p>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-  </main>
+      <section>
+        <h2>Pet Projects</h2>
+        <ul class="list">
+          <li class="list__item perspective">
+            <i class="fa-solid fa-paw perspective__icon-paw"></i>
+            <a class="list__link" href="http://daily-dev.com" target="_blank">DailySheet</a>
+            <ul class="list__pet">
+              <li class="list__pet-item">
+                <b class="list__pet-title">About:</b>
+                <p>
+                  Desktop application that accumulates useful feeds. Keeping you in touch with the latest news on
+                  technology. Whether you are a developer, manager, designer or just a cat lover like us, there is
+                  something to catch your eye or mind.
+                </p>
+              </li>
+              <li class="list__pet-item">
+                <b class="list__pet-title">Role:</b>
+                <p>Client app Developer, Website Front-end Developer.</p>
+              </li>
+              <li class="list__pet-item">
+                <b class="list__pet-title">Stack:</b>
+                <p>Electron, Typescript, React (with hooks)/Redux, Styled components, Webpack, Ansible, vscale.io.</p>
+              </li>
+            </ul>
+          </li>
+          <li class="list__item perspective">
+            <i class="fa-solid fa-paw perspective__icon-paw"></i>
+            <a class="list__link" href="http://stockroom-dev.herokuapp.com/" target="_blank">Stockroom</a>
+            <ul class="list__pet">
+              <li class="list__pet-item">
+                <b class="list__pet-title">About:</b>
+                <p>
+                  Service for accounting some goods via QR-codes. Primarily focused on owners of warehouses, stores and
+                  even offices that want to count their things.
+                </p>
+              </li>
+              <li class="list__pet-item">
+                <b class="list__pet-title">Role:</b>
+                <p>Front-end Developer.</p>
+              </li>
+              <li class="list__pet-item">
+                <b class="list__pet-title">Stack:</b>
+                <p>React-on-Rails, Webpack, Rails, Heroku.</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </main>
 
-  <footer class="footer">
     <div class="line"></div>
-    <p class="footer__text">
-      © Copyright Marat Fakhreev
-    </p>
-  </footer>
 
-  <script>
-    (function() {
-      const currentYear = new Date().getFullYear();
+    <footer class="footer">
+      <p class="footer__text">© Marat Fakhreev</p>
+    </footer>
 
-      document.querySelector('.footer__text').innerHTML = `© Copyright ${currentYear} Marat Fakhreev`;
-    })();
+    <script>
+      // Footer text
+      document.querySelector('.footer__text').innerHTML = `© ${new Date().getFullYear()} Marat Fakhreev`;
 
-    (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date(); a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+      // Analytics
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-    ga('create', 'UA-71744778-1', 'auto');
-    ga('send', 'pageview');
-  </script>
-</body>
-
+      ga('create', 'UA-71744778-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
 </html>
