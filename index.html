@@ -40,6 +40,7 @@
         align-items: center;
         min-height: 100vh;
         font-family: var(--font-family);
+        letter-spacing: -0.01rem;
         line-height: 1.5;
         color: var(--main-color);
         border-top: 3px solid var(--second-color);
@@ -77,9 +78,19 @@
         margin: 0.25rem 0;
       }
 
+      section {
+        width: 100%;
+      }
+
       ul {
         margin: 0;
         padding: 0;
+      }
+
+      li {
+        list-style-type: '·   ';
+        list-style-position: outside;
+        margin-bottom: 0.3rem;
       }
 
       p {
@@ -263,8 +274,7 @@
         transition: all 0.3s ease;
       }
 
-      .perspective__icon,
-      .perspective__icon-paw {
+      .perspective__icon {
         display: block;
         width: 30px;
         height: 30px;
@@ -282,8 +292,7 @@
       }
 
       @media (max-width: 600px) {
-        .perspective__icon,
-        .perspective__icon-paw {
+        .perspective__icon {
           position: relative;
           top: 0;
           left: 0;
@@ -297,7 +306,8 @@
       }
 
       @media (max-width: 600px) {
-        .perspective__icon-paw {
+        .perspective__icon--paw {
+          margin: 0;
           display: inline-block;
         }
       }
@@ -404,10 +414,27 @@
       </section>
 
       <section>
+        <h2>Skills</h2>
+        <ul class="block">
+          <li>HTML5</li>
+          <li>CSS3, Pre/Post processors, CSS-in-JS</li>
+          <li>JavaScript, TypeScript, CoffeeScript</li>
+          <li>React, Preact, Vue, Backbone, Marionette</li>
+          <li>Flux, Redux, Vuex</li>
+          <li>Vite, Esbuild, Webpack, Browserify, Gulp, Grunt</li>
+          <li>Expo, React Native, Cordova, Electron</li>
+          <li>Node.js, REST, JSON-API</li>
+          <li>Docker, Ansible</li>
+          <li>Chrome API, Messengers API, Web scraping</li>
+          <li>Functional Programming, OOP, MVC, KISS, Unidirectional architectures</li>
+        </ul>
+      </section>
+
+      <section>
         <h2>Pet Projects</h2>
         <ul class="list">
           <li class="list__item perspective">
-            <i class="fa-solid fa-paw perspective__icon-paw"></i>
+            <i class="fa-solid fa-paw perspective__icon perspective__icon--paw"></i>
             <a class="list__link" href="http://daily-dev.com" target="_blank">DailySheet</a>
             <ul class="list__pet">
               <li class="list__pet-item">
@@ -429,7 +456,7 @@
             </ul>
           </li>
           <li class="list__item perspective">
-            <i class="fa-solid fa-paw perspective__icon-paw"></i>
+            <i class="fa-solid fa-paw perspective__icon perspective__icon--paw"></i>
             <a class="list__link" href="http://stockroom-dev.herokuapp.com/" target="_blank">Stockroom</a>
             <ul class="list__pet">
               <li class="list__pet-item">
